@@ -1,14 +1,17 @@
 public class RaceCar extends Car {
 
     //Constructor
-    public RaceCar(String colour,int position){
+    public RaceCar(String colour){
         super(colour);
-        this.position =position;
+
     }
 
 
     //Override the main method in the base class
-    public void drive() {
-        super.drive();
+
+    @Override
+    public String drive() {
+        this.position += 20;
+        return ("Colour of car :" +this.colour +" ,position:"+this.position);
     }
 }

@@ -1,12 +1,16 @@
 public class Bakkie extends Car {
 
     //Constructor that calls the base constructor
-    public Bakkie(String colour){
+    public Bakkie(String colour) {
         super(colour);
     }
 
     //Overriding
-   public void drive(){
-        position=+2;
-   }
+
+    @Override
+    public String drive() {
+        this.position += 3;
+        return ("Colour of car :" +this.colour +" ,position:"+this.position);
+
+    }
 }
